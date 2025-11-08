@@ -10,10 +10,11 @@ O pafrão estabelece que:
 * unidades fixas (escalas)  
     - Se cada driver inventa uma escala, o software fica inconsistente. Se existe uma escala padrão (ex: décimos de % e centésimos de °C), todos os drivers entregam exatamente nesse formato e o restante do sistema pode confiar.  
     - por exemplo:  
-    | Grandeza | Tipo  | Escala |
+
+    | Grandeza | Tipo | Escala |
     | -------- | ----- | ------- |
-    | Umidade  | int16 | décimos % (456 → 45.6%) |
-| Temp     | int16 | centésimos °C (2534 → 25.34°C) |
+    | Umidade | int16 | décimos % (456 → 45.6%) |
+    | Temp | int16 | centésimos °C (2534 → 25.34°C) |
 
 Além disso, o ErrorType precisa ser global na estação. Isso quer dizer: um error.h comum, sem dependência circular.  
 Os drivers drivers precisam ter, sempre que possível, uma função init e uma função read, no máximo.
